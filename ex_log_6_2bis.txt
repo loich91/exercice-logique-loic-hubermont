@@ -1,0 +1,53 @@
+Début rechercheChaine
+    Variables locales
+        var texteSource :T <- ""
+        var texteRecherche :T <- ""
+        var cpt :N <- 0 // compteur de la première boucle
+        var premPos :N <- 0
+        var dernPos :N <- 0
+        var cptRecherche :N <- 0 // compte le nombre de fois que la chaine est trouvée dans le texte source
+        var cptPosSource :N <- 0 // compteur qui permet de boucler sur le texte source dans la seconde boucle
+        var cptPosRecherche :N <- 0 // compteur qui permet de boucler sur le texte à rechercher
+    Fin variables locales
+
+    Afficher "Entrer texte source :"
+    Saisir texteSource
+
+    Afficher "Entrer texte à rechercher :"
+    Saisir texteRecherche
+
+    cpt <- 1
+    Tant que cpt <= longueur(texteSource) - longueur(texteRecherche) + 1
+    // j'ai ajouté deux variables et modifié l'intérieur de la boucle pour enlever le sousChaine()
+    // début des modifications
+        cptPosSource <- cpt
+        cptPosRecherche <- 1
+        Tant que ( caract(texteSource, cptPosSource) = caract(texteRecherche, cptPosRecherche) et cptPosRecherche <= longueur(texteRecherche) )
+            cptPosSource <- cptPosSource + 1
+            cptPosRecherche <- cptPosRecherche + 1
+        Fin tant que
+
+        Si ( cptPosRecherche > longueur(texteRecherche) )
+            Alors
+                cptRecherche <- cptRecherche + 1
+                Si ( premPos = 0 )
+                    Alors
+                        premPos <- cpt
+                Fin si
+                dernPos <- cpt
+                cpt <- cpt + longueur(texteRecherche)
+            Sinon
+                cpt <- cpt + 1
+        Fin si
+    // fin des modifications
+    Fin tant que
+
+    Si ( premPos > 0)
+        Alors
+            Afficher "Première position du texte : ", premPos
+            Afficher "Dernière position du texte : ", dernPos
+            Afficher "Le texte à rechercher apparaît ", cptRecherche, " fois"
+        Sinon
+            Afficher "Le texte à rechercher ne se trouve pas dans le texte"
+    Fin si
+Fin rechercheChaine
