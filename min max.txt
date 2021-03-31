@@ -1,0 +1,56 @@
+Debut min-max
+   déclaration des variables locales
+      var entre :N <- 0
+      var max :N <- 0
+      var min :N <- 0
+      var pos :N <- 0
+      var premMax :N <- 0
+      var derMax :N <- 0
+      var nbrMax :N <- 0
+   fin déclaration
+   
+   Afficher "Entrer une série de nombres terminée par la valeur 100 : "
+   saisir entre
+   si entre <> 100
+      alors
+         // traitement de la première saisie
+         max <- entre
+         min <- entre
+         pos <- 1
+         premMax <- 1
+         derMax <- 1
+         nbrMax <- 1
+         //traitement des saisies suivantes
+         saisir entre
+         tant que entre <> 100
+            pos -> pos + 1
+            
+            si max <= entre
+              alors
+                  si max = entre 
+                     alors
+                        nbrMax <- nbrMax + 1
+                     sinon            
+                        max <- entre
+                        premMax <- pos
+                        nbrMax <- 1
+                  fin si
+                  derMax <- pos
+            finsi
+            
+            si min > entre
+               alors
+                  min <- entre
+            finsi
+            
+           
+            saisir entre
+         fin tant que
+         //affichage des résultats
+         afficher "max : ", max
+         afficher "premier max : ", premMax
+         afficher "dernier max : ", derMax
+         afficher "monbre de max : ", nbrMax
+         afficher "min : ", min
+   finsi
+Fin min-max
