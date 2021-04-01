@@ -1,0 +1,25 @@
+Exercice 7.4 :Inversion vecteur
+Ecrire le programme qui inverse un tableau de 10 nombres.
+debut declaration inversion-tableau
+    declaration variable
+        const TAILLE:N<-10
+        var tab:N[TAILLE]
+        var tab-inversion:N[TAILLE]
+        var ind:N <-1
+        var decrementeur:N <-TAILLE
+    fin declaration variable
+pour ind allant de 1 à TAILLE
+    saisir tab[ind]
+suivant
+
+decrementeur <- TAILLE
+
+pour ind allant de 1 à TAILLE
+    tab-inversion[decrementeur]<- tab[ind]
+    decrementeur <- decrementeur - 1
+suivant
+
+afficher tab
+afficher tab-inversion
+
+fin inversion-tableau

@@ -8,10 +8,10 @@ debut declaration tablemultiplication
         var facteur2:N <- 1
         var produit:N
     fin declaration variable
-tant que facteur1 < MAXIMUM
+tant que facteur1 <= MAXIMUM
     afficher "tables de",facteur1
     facteur2 <- 1
-    tant que facteur2 < MAXIMUM
+    tant que facteur2 <= MAXIMUM
         produit <- facteur1 X facteur2
         afficher produit
         facteur2 <- facteur2 + 1
