@@ -1,0 +1,24 @@
+Ecrire le programme qui affiche les tables de multiplication de 1 à 10. 
+( 1 X 1 = 1 à 10 X 10 = 100)
+
+debut declaration tablemultiplication
+    debut declaration variable
+        const MAXIMUM <- 10
+        var facteur1:N <- 1
+        var facteur2:N <- 1
+        var produit:N
+    fin declaration variable
+tant que facteur1 < MAXIMUM
+    afficher "tables de",facteur1
+    facteur2 <- 1
+    tant que facteur2 < MAXIMUM
+        produit <- facteur1 X facteur2
+        afficher produit
+        facteur2 <- facteur2 + 1
+    fin tant que
+    facteur1 <- facteur1 + 1
+fin tant que 
+
+
+fin tablemultiplication
+    
