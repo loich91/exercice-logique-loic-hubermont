@@ -6,3 +6,39 @@ Exemple :
 Valeur 1 = 5
 Valeur 2 = 9
 Total = 5 + 6 + 7 + 8 + 9 = 35
+
+déclaration somme
+    declaration variable
+    const TAILLE:N <- 5
+    var tab :N [TAILLE]
+    var somme :N
+    var ind :N <- 1
+    var nombres:N
+    var valeur1:N
+    var valeur2:N
+    fin declaration variable
+    afficher "vieillez saisir valeur1"
+    saisir valeur1
+    afficher "vieillez saisir valeur2
+    saisir valeur2
+    tab[1]<- valeur1
+
+pour ind allant 2 a TAILLE
+    si ind <> TAILLE
+    alors saisir nombres
+        tab[ind]<- nombre
+    sinon 
+        tab[TAILLE] <- valeur2
+    finsi
+ ind suivant
+
+si tab[1] = tab[TAILLE]
+    alors somme=tab[1]
+sinon 
+    pour ind allant de 1 à TAILLE
+        somme=somme+tab[ind]
+   ind suivant
+finsi
+
+afficher somme
+fin somme
