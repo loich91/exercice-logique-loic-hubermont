@@ -23,9 +23,11 @@ pour ind allant de 1 à TAILLE
             nombresCase <- nombresCase + 1
     fin si
 ind suivant
-
-moyenne=somme/nombresCase
-
-afficher moyenne
+si nombresCase = 0
+alors afficher "erreur aucun des nombres rentré ne permet de faire la moyenne"
+sinon
+    moyenne=somme/nombresCase
+    afficher moyenne
+finsi
 
 fin moyenne-interval-corrrigé
