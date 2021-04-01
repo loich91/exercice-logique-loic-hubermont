@@ -18,19 +18,20 @@ declaration juste-prix
         var valeurcorrect:B <-FALSE
     fin declaration variable
     nombreAleatoire <- fonction aléatoire(MIN,MAX)
+saisir nombreUtilisateur
+tant que ind<ESSAI ou nombreUtilisateur<>nombreAleatoire
 
-tant que ind<ESSAI ou valeurcorrect=FALSE
-        saisir nombreUtilisateur
-si nombreUtilisateur = nombreAleatoire
-    alors valeurcorrect <- true 
-sinon si nombreUtilisateur>nombreAleatoire
-    alors afficher "c'est moins"
-    sinon
-     afficher "c'est plus"
+    si nombreUtilisateur>nombreAleatoire
+        alors afficher "c'est moins"
+        sinon
+        afficher "c'est plus"
     finsi
-finsi
+
+saisir nombreUtilisateur
+ind <- ind +1
 fin tantque
-si valeurcorrect=true 
+
+si nombreUtilisateur=nombreAleatoire 
     alors afficher "vous avez trouvé le nombre "
 sinon 
     afficher "le nombre a trouvé était le",nombreAleatoire
