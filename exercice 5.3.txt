@@ -1,0 +1,38 @@
+Ecrire un programme qui demande à l’utilisateur de découvrir une valeur entre 0 et 100.
+- Le programme choisira la valeur de manière aléatoire *.
+- L’utilisateur entre des valeurs tant qu’elles sont différentes de la valeur choisie.
+- Après chaque entrée non valide le programme affiche si la valeur à découvrir est plus 
+grande ou plus petite que celle entrée.
+Fonction permettant la récupération d’un nombre aléatoire
+fonction aléatoire (max : N):N
+Retourne un nombre entier aléatoire entre 0 et max
+
+declaration juste-prix
+    declaration variable
+        const MIN:N <- 0
+        const MAX:N <-100
+        const ESSAI <- 5
+        var nombreAleatoire:N
+        var nombreUtilisateur:N
+        var ind:N
+        var valeurcorrect:B <-FALSE
+    fin declaration variable
+    nombreAleatoire <- fonction aléatoire(MIN,MAX)
+
+tant que ind<ESSAI ou valeurcorrect=FALSE
+        saisir nombreUtilisateur
+si nombreUtilisateur = nombreAleatoire
+    alors valeurcorrect <- true 
+sinon si nombreUtilisateur>nombreAleatoire
+    alors afficher "c'est moins"
+    sinon
+     afficher "c'est plus"
+    finsi
+finsi
+fin tantque
+si valeurcorrect=true 
+    alors afficher "vous avez trouvé le nombre "
+sinon 
+    afficher "le nombre a trouvé était le",nombreAleatoire
+finsi
+fin juste-prix
