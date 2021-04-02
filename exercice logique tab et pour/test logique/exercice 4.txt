@@ -14,7 +14,7 @@ croissant <- vrai
 pour ind allant de 1 à TAILLE
     si ind+1>TAILLE
         alors
-            si tab[ind] >= tab[ind + 1]
+            si tab[ind] > tab[ind + 1]
                 alors croissant <- vrai
             sinon 
                 croissant <- faux 
