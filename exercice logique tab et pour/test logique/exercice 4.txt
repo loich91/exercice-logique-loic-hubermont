@@ -1,0 +1,31 @@
+Ecrire le programme qui teste si le tableau de taille X “rempli” de nombres est trié par ordre strictement croissant 2.
+Le programme affichera sa conclusion.
+Testez la logique avec une table des valeurs pour le tableau tab suivant 
+[-1,	3,	7,	2,	9]
+
+declaration debut croissant
+    debut declaration variable
+        const TAILLE:N <- 5
+        var tab:N[TAILLE]
+        var ind :N 
+        var croissant:B
+    fin declaration variable
+croissant <- vrai
+pour ind allant de 1 à TAILLE
+    si ind+1>TAILLE
+        alors
+            si tab[ind] >= tab[ind + 1]
+                alors croissant <- vrai
+            sinon 
+                croissant <- faux 
+            finsi
+    finsi
+ind suivant
+
+si croissant = vrai
+    alors afficher "les nombres sont croissant"
+sinon
+    afficher "les nombres ne sont pas croissant entre eux "
+finsi
+
+fin croissant

@@ -1,0 +1,60 @@
+Ecrire le programme qui demande à l’utilisateur 
+de rentrer deux nombres strictement plus grands que zéro.
+Le programme calcule et affiche le résultat (quotient et reste)
+de la division entière du plus grand de ces nombres par le plus petit et
+ce à l’aide des seules opérations de soustraction et d’addition 
+(on ne peut pas utiliser DIV, /, MOD).
+
+declaration division
+    debut declaration variable
+        var nombresUtilisateur1:N 
+        var nombresUtilisateur2:N
+        var reste:N 
+        var quotient:N
+        var ind:N
+        var produit:N
+    fin declaration variable
+afficher "rentrez nombresUtilisateur1"
+saisir nombresUtilisateur1
+afficher "rentrez nombresUtilisateur2" 
+saisir nombresUtilisateur2
+produit <- 0
+ind <- 1
+si nombresUtilisateur1 > 0 et nombresUtilisateur2 > 0
+    alors 
+        si nombresUtilisateur1 > nombresUtilisateur2
+            tant que (nombresUtilisateur2 X ind) <= nombresUtilisateur1
+                produit <- nombresUtilisateur2 X ind
+                quotient <- ind
+                ind <- ind + 1
+            fin tant que
+            reste  <- nombresUtilisateur1 - produit
+
+            afficher "pour le nombre",nombresUtilisateur1 ,"le quotient est =", quotient
+            afficher "pour le nombre",nombresUtilisateur1 ,"le reste est =", reste
+
+        sinon si nombresUtilisateur2 > nombresUtilisateur1
+                tant que (nombresUtilisateur1 X ind) <= nombresUtilisateur2
+                    produit <- nombresUtilisateur1 X ind
+                    quotient <- ind
+                    ind <- ind + 1
+                fin tant que
+                reste  <- nombresUtilisateur2 - produit
+                
+                afficher "pour le nombre",nombresUtilisateur2 ,"le quotient est =", quotient
+                afficher "pour le nombre",nombresUtilisateur2 ,"le reste est =", reste
+            
+                sinon 
+                    quotient <- 1
+                    reste <- 0
+                afficher "pour le nombre",nombresUtilisateur1 ,"le quotient est =", quotient
+                afficher "pour le nombre",nombresUtilisateur1 ,"le reste est =", reste
+            
+
+            fin si
+        fin si
+
+sinon
+    afficher "les nombre rentrer ne sont pas valide"
+fin si
+fin division

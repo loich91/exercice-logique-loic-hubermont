@@ -1,0 +1,49 @@
+Ecrire le programme qui demande a l'utilisateur de rentrer une chaine de 
+caracteres. 
+Le programme testera si cette chaine est un palindrome parfait 1 et affichera 
+sa conclusion
+
+debut declaration palindrome
+        debut declaration variable
+            var TextUtilisateur:T
+            var Textinverse:T <- ""
+            var longueurText:N
+            var ind:N
+            var correspondance:B 
+        fin declaration variable
+
+afficher "vieillez saisir TextUtilisateur"
+saisir TextUtilisateur
+
+longueurText <- longueur(TextUtilisateur)
+ind <- longueurText
+Textinverse:T <- ""
+
+tant que ind > 0
+
+    Textinverse <- Textinverse + caract(TextUtilisateur,ind)
+    ind<-ind-1
+
+fin tantque
+ind <- 1
+correspondance<-vrai
+
+tant que ind <= longueurText
+    si correspondance = vrai
+        alors
+            si caract(TextUtilisateur,ind) = caract(Textinverse, ind) 
+                alors
+                    correspondance <- vrai
+            sinon
+                correspondance <- faux
+            fin si
+    fin si
+ind <- ind + 1
+fin tantque
+si correspondance = vrai
+    alors afficher "cette chaine de caracteres est un palindrome"
+sinon
+    afficher "cette chaine de caracteres n'est pas un palindrome"
+finsi
+
+fin palindrome
