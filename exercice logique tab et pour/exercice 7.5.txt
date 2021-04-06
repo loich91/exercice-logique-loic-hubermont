@@ -11,6 +11,7 @@ declaration supprimer-espaces
         var nombres-espaces:N
         var ind:N <- 1
         var nbreCaractere:N 
+        var j:N <- 1
 
     fin declaration variable
 nombres-espaces <- 0;
@@ -22,12 +23,15 @@ pour ind allant de 1 à TAILLE
     finsi
 suivant
 nbreCaractere <- TAILLE - nombres-espaces
+ j<- 1
 pour ind allant de 1 à TAILLE
     si tab[ind] <> espaces
-        alors tab-resultat<-tab[ind]
+        alors tab-resultat[j]<-tab[ind]
+        j <- j + 1 
     finsi
     si ind > nbreCaractere
-        alors tab-resultat[ind] <- espaces
+        alors tab-resultat[j] <- espaces
+        j <- j + 1 
     finsi
 suivant
 fin  declaration supprimer-espaces

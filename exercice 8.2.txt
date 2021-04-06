@@ -1,0 +1,50 @@
+8.2 Ecrire le programme qui simule l’affichage d’un compteur digital à 3 chiffres
+000, 001, …, 009, 010, …, 099, 100, …, 999
+
+debut declaration compteur
+    debut declaration variable
+        const TAILLE:N <- 9
+        var unite:N <- 0
+        var dizaine:N <- 0
+        var centaine:N <- 0
+        var i:N <- 0
+        var j:N <- 0
+        var k:N <- 0
+
+
+    fin declaration variable
+
+afficher rentrez unite
+saisir unite 
+afficher rentrez dizaine
+saisir dizaine
+afficher rentrez centaine
+saisir centaine
+
+tant que i <= unite
+si i = unite
+    alors afficher i
+finsi
+        si dizaine != 0
+            alors
+            tant que j <= dizaine
+                si j = dizaine
+                    alors afficher j
+                finsi
+            si centaine != 0
+                    alors
+                    tant que k <= centaine
+                        si k = centaine
+                            alors afficher k
+                        finsi
+                        k <- k +1
+                    fin tant que
+            finsi
+            j <- j+1
+            fin tant que
+        finsi
+
+    i <- i +1
+fin tant que 
+
+fin compteur
