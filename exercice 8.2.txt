@@ -11,25 +11,13 @@ debut declaration compteur
 
 
     fin declaration variable
-tant que nbreTest = false
-    tant que unite<= TAILLE
-        unite <- unite + 1
-        afficher unite
-        afficher dizaine
-        afficher centaine
-    fin tantque 
-    si unite = 10
-        alors unite <- 0
-        dizaine <- dizaine +1
-    finsi
-    si dizaine = 10
-        alors dizaine <- 0
-        centaine <- centaine +1
-    finsi
-    si unite = TAILLE et dizaine = TAILLE et centaine = TAILLE
-        alors 
-        nbreTest <- true
-    finsi
-fin tant que 
+    
+pour centaine allant de 0 à TAILLE
+    pour dizaine allant de 0 à TAILLE
+        pour unite allant de 0 à TAILLE
+        afficher centaine, dizaine, unite
+        suivant
+    suivant
+suivant
 
 fin compteur
