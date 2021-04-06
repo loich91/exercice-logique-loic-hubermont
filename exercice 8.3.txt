@@ -18,7 +18,7 @@ déclaration nombres_parfait
             finsi
             si somme-nombre == nombre
                 alors 
-                    afficher "ce nombre est parfait"
+                    afficher nombre,"ce nombre est parfait"
         suivant
     suivant
 fin nombres-parfait
