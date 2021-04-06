@@ -7,44 +7,29 @@ debut declaration compteur
         var unite:N <- 0
         var dizaine:N <- 0
         var centaine:N <- 0
-        var i:N <- 0
-        var j:N <- 0
-        var k:N <- 0
+        var nbreTest:B <- false
 
 
     fin declaration variable
-
-afficher rentrez unite
-saisir unite 
-afficher rentrez dizaine
-saisir dizaine
-afficher rentrez centaine
-saisir centaine
-
-tant que i <= unite
-si i = unite
-    alors afficher i
-finsi
-        si dizaine != 0
-            alors
-            tant que j <= dizaine
-                si j = dizaine
-                    alors afficher j
-                finsi
-            si centaine != 0
-                    alors
-                    tant que k <= centaine
-                        si k = centaine
-                            alors afficher k
-                        finsi
-                        k <- k +1
-                    fin tant que
-            finsi
-            j <- j+1
-            fin tant que
-        finsi
-
-    i <- i +1
+tant que nbreTest = false
+    tant que unite<= TAILLE
+        unite <- unite + 1
+        afficher unite
+        afficher dizaine
+        afficher centaine
+    fin tantque 
+    si unite = 10
+        alors unite <- 0
+        dizaine <- dizaine +1
+    finsi
+    si dizaine = 10
+        alors dizaine <- 0
+        centaine <- centaine +1
+    finsi
+    si unite = TAILLE et dizaine = TAILLE et centaine = TAILLE
+        alors 
+        nbreTest <- true
+    finsi
 fin tant que 
 
 fin compteur
