@@ -16,7 +16,7 @@ déclaration nombres_parfait
             si nombre mod diviseurs = 0
                 alors somme <- somme + 1
             finsi
-            si somme == nombre
+            si somme-nombre == nombre
                 alors 
                     afficher "ce nombre est parfait"
         suivant
