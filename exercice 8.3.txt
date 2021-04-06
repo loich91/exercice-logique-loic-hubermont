@@ -1,0 +1,24 @@
+Écrire le programme qui affiche les nombres parfaits inférieurs à 100. 
+Un nombre parfait est un entier égal à la somme de ses diviseurs sauf lui-même.
+6 = (6/2)+2+1
+6 = 3 + 2 + 1 
+28 = (28/2) + 7 + 4 + 2 + 1 
+28 = 14 + 7 + 4 + 2 + 1 
+déclaration nombres_parfait
+    déclaration variable
+    nombre:N <- 0
+    somme: N <- 0
+    diviseurs:N <- 0
+    parfait <- 0
+    fin declaration variable
+    pour nombre allant de 0 a TAILLE
+        pour diviseurs allant de 0 à TAILLE
+            si nombre mod diviseurs = 0
+                alors somme <- somme + 1
+            finsi
+            si somme == nombre
+                alors 
+                    afficher "ce nombre est parfait"
+        suivant
+    suivant
+fin nombres-parfait
