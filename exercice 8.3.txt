@@ -6,10 +6,10 @@ Un nombre parfait est un entier égal à la somme de ses diviseurs sauf lui-mêm
 28 = 14 + 7 + 4 + 2 + 1 
 déclaration nombres_parfait
     déclaration variable
-    nombre:N <- 0
-    somme: N <- 0
-    diviseurs:N <- 0
-    parfait <- 0
+    const TAILLE:N <- 100
+    var nombre:N <- 0
+    var somme: N <- 0
+    var diviseurs:N <- 0
     fin declaration variable
     pour nombre allant de 0 a TAILLE
         pour diviseurs allant de 0 à TAILLE
