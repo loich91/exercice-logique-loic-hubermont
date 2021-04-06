@@ -7,31 +7,33 @@ declaration supprimer-espaces
         const TAILLE:N <- 30
         var tab:T [TAILLE]
         var tab-resultat:T[TAILLE]
-        var espaces:T <- " ";
-        var nombres-espaces:N
+        var espaces:T <- " "
         var ind:N <- 1
         var nbreCaractere:N 
         var j:N <- 1
+        var chaine:T <-""
+
 
     fin declaration variable
 nombres-espaces <- 0;
 nbreCaractere <- 0;
 pour ind allant de 1 à TAILLE
-    si tab[ind] = espaces
-    alors
-       nombres-espaces <- nombres-espaces + 1
-    finsi
-suivant
-nbreCaractere <- TAILLE - nombres-espaces
- j<- 1
-pour ind allant de 1 à TAILLE
     si tab[ind] <> espaces
-        alors tab-resultat[j]<-tab[ind]
-        j <- j + 1 
-    finsi
-    si ind > nbreCaractere
-        alors tab-resultat[j] <- espaces
-        j <- j + 1 
+        alors
+            chaine <- chaine + tab[ind]
     finsi
 suivant
+nbreCaractere <- longueur(chaine)
+j<- 1
+
+pour ind allant de 1 à TAILLE
+    si ind <= nbreCaractere
+        alors tab-resultat[j] <- caract(chaine,j)
+        j <- j +1
+        sinon 
+            tab-resultat[j] <- espace
+            j <- j + 1
+
+suivant
+
 fin  declaration supprimer-espaces
