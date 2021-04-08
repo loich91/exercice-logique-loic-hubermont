@@ -1,0 +1,41 @@
+Ecrire le programme qui copie les éléments d’un tableau à 2 dimensions
+dans un tableau à une 
+dimension du même nombre de cases.
+1. Faire l’exercice en utilisant 3 variables d’indice
+2. Faire l’exercice en utilisant 2 variables d’indice
+3. Faire l’exercice en utilisant 1 variable d’indice
+
+declaration copie
+    debut declaration variable
+    var indice :N <-1
+    var indice2 :N <-1
+    const TAILLE:N <- 2
+    const TAILLE2:N <- TAILLE * 2
+    Tab-deux[TAILLE][TAILLE] :N 
+    tab[TAILLE2] :N
+    fin declaration variable
+pour indice allant de 1 a TAILLE2
+    si ind = 1
+        alors tab[ind] <- tab-deux[ind][ind]
+            sinon si ind = 2
+                    alors tab[ind] <-tab-deux[ind-1][ind]
+                finsi
+            sinon si ind = 3 
+                    alors tab[ind] <- tab-deux[ind-1][ind-2]
+                finsi
+            sinon si ind = 4 
+                    alors tab[ind] <- tab-deux[ind-2][ind-2]
+                finsi
+    fin si
+
+
+
+indice suivant
+
+fin declaration copie
+            1   2   3     4
+          1.1  1.2  2.1   2.2
+tab-deux=[1  ,  2 ][ 1  ,  2 ]
+     
+     1  2  3  4
+tab=[1 ,2 ,1, 2]
