@@ -1,0 +1,25 @@
+Ecrire le programme qui initialise les cases de la diagonale principale 
+d’un tableau carré avec la valeur 1 et les cases 
+de la diagonale secondaire avec la valeur 2.
+
+declaration carré
+    déclaration variable
+    const TAILLE:N <- 4
+    var tab[TAILLE][TAILLE]:N
+    var x1:N <- 1
+    var x2:N <- 1
+    var y2:N <- 3
+    var valeur1 :N <-1
+    var valeur2 :N <-2
+    var fin variable 
+    
+pour x1 allant de 2 à TAILLE
+    tab [x1][x1] <- valeur1
+x1 suivant
+
+pour x2 allant de 2 à TAILLE
+    y2 <- y2 -1
+    tab[x2][y2] <- valeur2
+x2 suivant
+
+fin carré
