@@ -1,0 +1,49 @@
+Ecrire le programme qui vérifie que les sommes de chaque ligne, 
+chaque colonne et des deux 
+diagonales d’un tableau numérique carré sont les mêmes.
+
+declaration carré
+    declaration variable
+        const TAILLE :N <-2
+        var tab[TAILLE][TAILLE] :N
+        sommes1 :N
+        sommes2 :N
+        sommes3 :N
+        sommes4 :N
+        x :N
+        y : N
+
+    fin declaration variable
+pour x allant de 1 à TAILLE
+    pour y allant de 1 à TAILLE
+        si x = 1
+            alors sommes1 <- sommes1 + Tab[x][y]
+                  sommes3 <- tab[x][1] + Tab[x][1] 
+        fin si
+        si x = 2 
+            alors sommes2 <-sommes2 + tab [x][y]
+                sommes4 <- tab[x][1] + Tab[x][2] 
+    y suivant
+x suivant
+si sommes1 = sommes2 et sommes3 = sommes4 et sommes1 = sommes4
+    alors afficher "le carré est parfait"
+sinon 
+    afficher "le carré n'est pas parfait"
+fin carré
+
+
+tab[1,2]3 sommes1
+   [1,2]3 sommes2
+    2 4
+    s s
+    o o
+    m m
+    m m 
+    e e 
+    s s
+    3 4
+    le carré n'est pas parfait
+tab[2,2]4
+   [2,2]4
+    4 4
+    le carré est parfait
