@@ -22,7 +22,7 @@ pour x allant de 1 à TAILLE
         fin si
         si x = 2 
             alors sommes2 <-sommes2 + tab [x][y]
-                sommes4 <- tab[x][1] + Tab[x][2] 
+                sommes4 <- tab[x-1][2] + Tab[x][2] 
     y suivant
 x suivant
 si sommes1 = sommes2 et sommes3 = sommes4 et sommes1 = sommes4
@@ -31,9 +31,9 @@ sinon
     afficher "le carré n'est pas parfait"
 fin carré
 
-
-tab[1,2]3 sommes1
-   [1,2]3 sommes2
+      y y
+tab x[1,2]3 sommes1
+    x[1,2]3 sommes2
     2 4
     s s
     o o
