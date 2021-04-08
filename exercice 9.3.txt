@@ -1,0 +1,52 @@
+Ecrire le programme qui affiche la moyenne le maximum et le minimum de chaque ligne d’un 
+tableau à deux dimensions.
+declaration moyenne
+    declaration variable
+    var somme1 :N
+    var moyenne1 :N
+    var somme2 :N
+    var moyenne2 :N
+    var max1 :N
+    var max2 :N
+    var min1 :N
+    var min2 :N
+    const TAILLE :N <-2
+    var tab[TAILLE][TAILLE] :N
+    var ind :N <- 1
+    var ind2 :N <-1
+    fin declaration variable
+max1 <- tab [1][1]
+max2 <- tab [2][1]
+min1 <- tab [1][1]
+min2 <- tab [2][1]
+pour ind allant de 1 a TAILLE
+    pour ind2 allant de 1 à TAILLE
+        si ind = 1
+            alors somme1 <- somme1 + tab[ind][ind2]
+            si max1 < tab [ind] [ind2]
+                alors max1 <- tab [ind][ind2]
+            finsi
+            si min1 > tab [ind] [ind2]
+                alors min1 <-tab [ind] [ind2]
+            finsi
+        sinon si ind = 2 
+            alors somme2 <- somme2 + tab[ind][ind2]
+                si max2 < tab [ind] [ind2]
+                    alors max2 <- tab [ind][ind2]
+                finsi
+                si min2 > tab [ind] [ind2]
+                    alors min2 <-tab [ind] [ind2]
+                finsi
+            finsi
+        finsi
+
+    ind2 suivant
+moyenne1 <- somme1/TAILLE
+moyenne2 <- somme2/TAILLE
+afficher "la valeur maximum et minimum est ",max1," et ",min1, "et la moyenne est ",moyenne1,
+" pour la premiere dimension du tableau";
+afficher "la valeur maximum et minimum est ",max2,"et", min2 ,"et la moyenne est ",moyenne2,
+" pour la premiere dimension du tableau";
+ind suivant
+
+fin moyenne
