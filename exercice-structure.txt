@@ -16,10 +16,15 @@ declaration exercice-structure
 
     fin variable local
 pour ind allant de 1 a TAILLE
+    afficher "saisissez le nom"
     saisir tab[ind].personne.nom
+    afficher "saisissez le prenom"
     saisir tab[ind].personne.prenom
+    afficher "saisissez le jour"
     saisir tab[ind].personne.date-naissance.jour
+    afficher "saisissez le mois"
     saisir tab[ind].personne.date-naissance.mois
+    afficher "saisissez le annee"
     saisir tab[ind].personne.date-naissance.annee
 ind suivant
 fin exercice-structure
