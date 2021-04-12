@@ -1,30 +1,31 @@
+structure Personne
+    var nom:T <- null
+    var prenom:T <- null
+    var date-naissance:  date
+    var adresse-stagiaire : Adresse
+finstructure
+structure Date
+    var jour:N <- 0
+    var mois:N   <- 0
+    var annee: N <- 0
+finstructure
+structure Adresse
+    var rue: T <- null
+    var num-maison:N <- 0
+    var localite:T <- null
+    var CP :N <-0
+finstructure
 declaration exercice-structure
     déclaration variable local
         const TAILLE:N <- 10
-        var tab[TAILLE]:N <-  personne
+        var tab:Personne [TAILLE]  
         ind:N <- 1
     fin variable local
-    structure personne
-       var nom:T <- null
-       var prenom:T <- null
-       var date-naissance:  date
-       var adresse-stagiaire : adresse
-    finstructure
-    structure date
-       var jour:N <- 0
-       var mois:N   <- 0
-       var annee: N <- 0
-    finstructure
-    structure adresse
-        var rue: T <- null
-        var num-maison:N <- 0
-        var localite:T <- null
-        var CP :N <-0
-    finstructure
+
 pour ind allant de 1 a TAILLE
     tab[ind] <- creer personne
-    tab[ind].date-naissance <- creer date
-    tab[ind].adresse-stagiaire <- creer adresse
+    tab[ind].date-naissance <- creer Date
+    tab[ind].adresse-stagiaire <- creer Adresse
     afficher "saisissez le nom"
     saisir tab[ind].nom
     afficher "saisissez le prenom"
@@ -42,6 +43,6 @@ pour ind allant de 1 a TAILLE
     afficher "saisissez votre localite"
     saisir tab[ind].adresse-stagiaire.localite
     afficher "saisissez votre code postal"
-    saisir tab[ind]..adresse-stagiaire.CP
+    saisir tab[ind].adresse-stagiaire.CP
 ind suivant
 fin exercice-structure
