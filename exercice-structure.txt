@@ -1,20 +1,19 @@
 declaration exercice-structure
     déclaration variable local
-    structure personne
-       var nom:T
-       var prenom:T
-       var date-naissance: date
-    finstructure
-    structure date
-       var jour:N
-       var mois:N
-       var annee: N
-    finstructure
         const TAILLE:N <- 10
         var tab[TAILLE]:N <- personne
         ind:N <- 1
-
     fin variable local
+    structure personne
+       var nom:T <- null
+       var prenom:T <- null
+       var date-naissance: date
+    finstructure
+    structure date
+       var jour:N <- 0
+       var mois:N   <- 0
+       var annee: N <- 0
+    finstructure
 pour ind allant de 1 a TAILLE
     afficher "saisissez le nom"
     saisir tab[ind].personne.nom
