@@ -16,16 +16,16 @@ declaration exercice-structure
     finstructure
 pour ind allant de 1 a TAILLE
     tab[ind] <- cree personne
-    tab[ind].personne.date-naissance <- cree date
+    tab[ind].date-naissance <- cree date
     afficher "saisissez le nom"
-    saisir tab[ind].personne.nom
+    saisir tab[ind].nom
     afficher "saisissez le prenom"
-    saisir tab[ind].personne.prenom
+    saisir tab[ind].prenom
     afficher "saisissez le jour"
-    saisir tab[ind].personne.date-naissance.jour
+    saisir tab[ind].date-naissance.jour
     afficher "saisissez le mois"
-    saisir tab[ind].personne.date-naissance.mois
+    saisir tab[ind].date-naissance.mois
     afficher "saisissez le annee"
-    saisir tab[ind].personne.date-naissance.annee
+    saisir tab[ind].date-naissance.annee
 ind suivant
 fin exercice-structure
