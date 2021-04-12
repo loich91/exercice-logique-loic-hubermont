@@ -8,15 +8,23 @@ declaration exercice-structure
        var nom:T <- null
        var prenom:T <- null
        var date-naissance:  date
+       var adresse-stagiaire : adresse
     finstructure
     structure date
        var jour:N <- 0
        var mois:N   <- 0
        var annee: N <- 0
     finstructure
+    structure adresse
+        var rue: T <- null
+        var num-maison:N <- 0
+        var localite:T <- null
+        var CP :N <-0
+    finstructure
 pour ind allant de 1 a TAILLE
-    tab[ind] <- cree personne
-    tab[ind].date-naissance <- cree date
+    tab[ind] <- creer personne
+    tab[ind].date-naissance <- creer date
+    tab[ind].adresse-stagiaire <- creer adresse
     afficher "saisissez le nom"
     saisir tab[ind].nom
     afficher "saisissez le prenom"
@@ -27,5 +35,13 @@ pour ind allant de 1 a TAILLE
     saisir tab[ind].date-naissance.mois
     afficher "saisissez le annee"
     saisir tab[ind].date-naissance.annee
+    afficher "saisissez votre rue"
+    saisir tab[ind].adresse-stagiaire.rue
+    afficher "saisissez votre numero de maison"
+    saisir tab[ind].adresse-stagiaire.num-maison
+    afficher "saisissez votre localite"
+    saisir tab[ind].adresse-stagiaire.localite
+    afficher "saisissez votre code postal"
+    saisir tab[ind]..adresse-stagiaire.CP
 ind suivant
 fin exercice-structure
