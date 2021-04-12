@@ -1,13 +1,13 @@
 declaration exercice-structure
     déclaration variable local
         const TAILLE:N <- 10
-        var tab[TAILLE]:N <- personne
+        var tab[TAILLE]:N <-  personne
         ind:N <- 1
     fin variable local
     structure personne
        var nom:T <- null
        var prenom:T <- null
-       var date-naissance: date
+       var date-naissance:  date
     finstructure
     structure date
        var jour:N <- 0
@@ -15,6 +15,8 @@ declaration exercice-structure
        var annee: N <- 0
     finstructure
 pour ind allant de 1 a TAILLE
+    tab[ind] <- cree personne
+    tab[ind].personne.date-naissance <- cree date
     afficher "saisissez le nom"
     saisir tab[ind].personne.nom
     afficher "saisissez le prenom"
