@@ -10,7 +10,7 @@ declaration recherche-nombre
 afficher "rentrez nombre"
 saisir nbre
 
-procedure recherche(in tab[TAILLE]:N, in nbre:N, out position:N)
+procedure recherche(in tab:N,TAILLE:N, in nbre:N, out position:N)
 var ind <-1
 var position <- -1
     pour ind allant de 1 à TAILLE
