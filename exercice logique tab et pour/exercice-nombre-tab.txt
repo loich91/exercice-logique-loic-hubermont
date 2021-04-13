@@ -1,0 +1,30 @@
+entré tableau trié rechercher une valeur voir si elle est présente et la position
+
+declaration recherche-nombre
+    declaration variable local
+        const TAILLE<-5
+        var tab[TAILLE]:N
+        var nbre:N
+        var position:N
+    fin variable local
+afficher "rentrez nombre"
+saisir nbre
+
+procedure recherche(in tab[TAILLE]:N, in nbre:N, out position:N)
+var ind <-1
+var position <- -1
+    pour ind allant de 1 à TAILLE
+        si tab[ind] = nbre
+            alors position <- ind
+        finsi
+    ind suivant 
+fin recherche
+
+recherche (tab[TAILLE],nbre,position)
+si position = -1 
+    alors afficher "nombre non trouvé"
+sinon si nombre>=0
+    alors afficher "nombre trouvé a la position"+position
+    finsi
+finsi
+fin recherche-nombre
