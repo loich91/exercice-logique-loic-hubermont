@@ -6,11 +6,15 @@ fin List
 fonction remove (in var l:List, in var position:N):N 
     var positionactuelle:N <- l
     var celtemp :list <- l
+si pos > 1
+    alors
+        pour positionactuelle allant de 1 à position-2
+            celtemp <- celtemp.suivant
+        positionactuelle suivant
 
-    pour positionactuelle allant de 1 à position-2
-        celtemp <- celtemp.suivant
-    positionactuelle suivant
-
-    celtemp.suivant <- celtemp.suivant.suivant
-    retourne celtemp
+        celtemp.suivant <- celtemp.suivant.suivant
+    sinon
+        l <- l.suivant
+finsi
+    retourne l
 fin lire
