@@ -3,15 +3,14 @@ structure List
     suivant:List
 fin List
 
-procedure update (in var l:List, in var position:N):N 
+fonction remove (in var l:List, in var position:N):N 
     var positionactuelle:N <- l
-    var valeur :N <- 0
     var celtemp :list <- l
 
-    pour positionactuelle allant de 1 à position-1
+    pour positionactuelle allant de 1 à position-2
         celtemp <- celtemp.suivant
     positionactuelle suivant
-    
-        celTemp.valeur <- val
-    retourne valeur
+
+    celtemp.suivant <- celtemp.suivant.suivant
+    retourne celtemp
 fin lire
