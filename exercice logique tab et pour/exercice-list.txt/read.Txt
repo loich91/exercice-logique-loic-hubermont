@@ -12,5 +12,6 @@ fonction lire (in var l:List, in var position:N):N
             celTemp <- celTemp.suivant
             afficher valeur
         fin tantque
+        
     retourne valeur
 fin lire
