@@ -4,14 +4,14 @@ structure List
 fin List
 
 fonction lire (in var l:List, in var position:N):N 
-    var celTemp <- l
-    var valeur <- l.celTemp
+    var position <- l
+    var valeur <- l.position
 
-        tant que celTemp != null
-            valeur <- l.celTemp
-            celTemp <- celTemp.suivant
+        tant que position != null
+            valeur <- l.position
+            position <- position.suivant
             afficher valeur
         fin tantque
-        
+
     retourne valeur
 fin lire
