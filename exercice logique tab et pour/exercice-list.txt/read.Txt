@@ -8,14 +8,12 @@ fonction lire (in var l:List, in var position:N):N
     var valeur :N <- 0
     var celtemp :list <- l
 
-    pour positionactuelle allant de 1 à position
-        valeur <- celtemp.valeur
-        afficher valeur
+    pour positionactuelle allant de 1 à position-1
+
         celtemp <- celtemp.suivant
 
     positionactuelle suivant
         fin tantque
         valeur <- celtemp.valeur
-
     retourne valeur
 fin lire
