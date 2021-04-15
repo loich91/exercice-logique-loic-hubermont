@@ -1,0 +1,16 @@
+structure List
+    valeur :N 
+    suivant:List
+fin List
+
+fonction lire (in var l:List, in var position:N):N 
+    var celTemp <- l
+    var valeur <- l.celTemp
+
+        tant que celTemp != null
+            valeur <- l.celTemp
+            celTemp <- celTemp.suivant
+            afficher valeur
+        fin tantque
+    retourne valeur
+fin lire
