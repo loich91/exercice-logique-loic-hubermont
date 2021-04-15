@@ -1,0 +1,19 @@
+structure List
+    valeur :N 
+    suivant:List
+fin List
+
+procedure update (in var l:List, in var position:N):N 
+    var positionactuelle:N <- l
+    var valeur :N <- 0
+    var celtemp :list <- l
+
+    pour positionactuelle allant de 1 à position-1
+
+        celtemp <- celtemp.suivant
+
+    positionactuelle suivant
+        fin tantque
+        celTemp.valeur <- val
+    retourne valeur
+fin lire
