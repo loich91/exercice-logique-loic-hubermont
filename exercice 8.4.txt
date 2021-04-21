@@ -1,0 +1,16 @@
+Écrire le programme qui affiche les 100 premiers nombres premiers
+declaration nombre-premiers
+    declaration variable
+        const TAILLE:N <- 100
+        var nombre:N <- 0
+        var somme: N <- 0
+        var diviseurs:N <- 0
+
+    fin declaration variable
+pour nombre allant de 1 à TAILLE
+    pour diviseurs allant de 2 à TAILLE
+        si nombre mod 1 = 0 et nombre mod nombre = 0 et nombre mod diviseurs  <> 0
+            alors afficher nombre, "ce nombre est premiers" 
+    diviseurs suivant
+nombre suivant
+fin nombre-premiers
