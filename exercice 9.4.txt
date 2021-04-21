@@ -34,14 +34,13 @@ fin carré
       y y
 tab x[1,2]3 sommes1
     x[1,2]3 sommes2
-    2 4
-    s s
-    o o
-    m m
-    m m 
-    e e 
-    s s
-    3 4
+      2 4
+      s s
+      o o
+      m m
+      m m 
+      e e 
+      s s
     le carré n'est pas parfait
 tab[2,2]4
    [2,2]4
