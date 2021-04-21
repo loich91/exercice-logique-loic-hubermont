@@ -25,7 +25,7 @@ public class Declaration {
         for (int i=0;i < tab6.length;i++){
             System.out.println();
             for (int y =0; y<tab6[i].length;y++){
-                System.out.print(tab6[i][y]+" ");
+                System.out.println(tab6[i][y]+" ");
             }
         }
     }
